@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../store/auth';
 import { useCart } from '../store/cart';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useI18n } from '../store/i18n';
 import { useCurrency } from '../store/currency';
 import { useAddress } from '../store/address';
@@ -38,7 +38,7 @@ export function Navbar() {
             className="select select-bordered ml-2"
             aria-label="Language selector"
             value={lang}
-            onChange={(e)=>setLang(e.target.value)}
+            onChange={(e)=>setLang(e.target.value as any)}
           >
             <option value="en">English</option>
             <option value="hi">हिन्दी</option>
